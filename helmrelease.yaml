@@ -4,20 +4,12 @@ metadata:
   name: react-app
   namespace: default
 spec:
-  interval: 1m
   chart:
     spec:
       chart: ./charts/react-app
       sourceRef:
         kind: GitRepository
-        name: react-gitops-demo
+        name: flux-system
         namespace: flux-system
-  values:
-    image:
-      repository: react-hello
-      tag: latest
-      pullPolicy: Never
-    service:
-      type: NodePort
-      port: 80
-      nodePort: 30080
+  interval: 1m
+  values: {}

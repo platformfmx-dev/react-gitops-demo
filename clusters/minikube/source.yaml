@@ -1,4 +1,4 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
   name: react-gitops-demo
@@ -6,4 +6,5 @@ metadata:
 spec:
   interval: 1m
   url: https://github.com/platformfmx-dev/react-gitops-demo
-  branch: main
+  ref:
+    branch: main
